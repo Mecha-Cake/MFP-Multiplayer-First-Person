@@ -1,0 +1,224 @@
+MFP:  Multiplayer First Person.
+Lovatto Studio 2020.
+
+2.1.7
+
+Fix: Player stay alive when health is < 1 but > 0 (by decimals).
+Fix: Issue that cause that player not be able to interact with doors or other pickable objects when an dragging object fells.
+Improve: Add fullscreen mode setting.
+Fix: Duplicated resolutions settings in some device's screens.
+
+2.1.5
+
+-Fix: Typecast error in newest version of Photon PUN.
+-Improve: Add option in GameData to allow master client start the match without require to all players to be ready.
+-Fix: Authentication error when leave a room and join to the lobby.
+-Fix: Players shows stand up inside the vehicle when a player enter to the room and an existing players is in a car.
+-Fix: Available room list doesn't shows after leave a match (Since Photon 2.25++)
+-Fix: Vehicle icons shows in the spawn selector even when the vehicle is used by another player.
+
+2.1
+
+-Upgrade: Unity 2018.4 as minimum version.
+-Improve: Now you can spawn directly in empty vehicles from the spawn point selector screen.
+-Improve: Added new spawn type 'InDifferents' this method ensure that each player spawn in a different spawn point at start.
+-Added: Private Rooms, now you can create private rooms by set a password in the room creation menu.
+-Improve: Post Processing Stack Updated to V2 using UPM.
+-Fix: All CS0649 warnings.
+-Add: Photon Offline Support, now you can play the room scenes directly without connect trough the lobby when Offline Mode is Enable in GameData.
+-Added: South Africa, Russia and Russia East available servers.
+
+2.0
+
+Fix: Room List only display the lasted created room.
+Fix: Connected To: (Region) always appear as NONE instead of the server region name.
+Fix: Quick play matchmaking was not joined players to pre-match menu when there was a room created.
+Fix: Player Count was not begin update in pre-match menu.
+Fix: Kick button appear for Non-Master Clients in pre-match menu.
+
+1.9.3
+
+Fix: Sometimes when enter in passenger seat and then in a driver seat the passenger camera get enabled.
+Upgrade: Unity 2017.4 as minimum version.
+
+1.9
+
+Add: Player Selection, now can add different players models so players can select in a menu in lobby.
+Add: Vehicle Damage system, now vehicle received damage by collision and these explode when health < 1
+Add: Auto-re spawn system for vehicles when one these get destroyed.
+Add: SpawnPoint selection screen (option), if you set this the player can select where spawn the first time.
+Fix: Vehicle audio only play if the Game view camera (from editor) is near to the vehicle.
+Upgrade: To Unity 5.6 as minimum version.
+Add: Factor Area, these items can be place all over the map, when players enter in it'll apply a force in the direction of the arrow to the player and or vehicle.
+Improve: Vehicle Camera, now are only one vehicle camera instead of each vehicle have they own (for driver only).
+Improve: Now vehicle camera detect collisions
+Add: Drag gable objects, now can create drag gable objects and every player can grab they and sync position over network.
+Improve: Better vehicle movement synchronization, now vehicles don't have the jiggle movement on high speeds.
+Add: Camera transition when player enter in vehicle.
+Improve: Remove the legacy post-process effects and replace with PPE Stacks V1.
+Fix: Issue that cause players not enter in the right passenger seat after enter in various seats.
+Improve: Now network vehicle values are apply in FixedUpdate to better match with the local physic movement.
+Improve: Vehicle collision force calculation.
+Add: Infinity time as option for room creation, with this the game will not end until no one player are in room.
+Fix: Jet automatically slide forward on start.
+Improve: Now doors are automatically added in the door manager list.
+Improve: More smooth front wheels rotation in network players.
+Improve: Network player footsteps.
+Fix: Players can create rooms after leave a 'pre-scene' lobby.
+
+1.8.5
+
+Upgrade: To Photon PUN 2, which causes a series of changes in the structure of the code but with the same functionality and better performance in some cases. 
+Add: Simple door, multiplayer simple doors that sync and buffered all doors states in the map locally to not saturated buffered server memory.
+Improve: Now player turning the steering wheel with the hands movement.
+Fix: Press multiple times the "Start" button in the pre-game lobby causes the countdown to accelerate.
+Improve: New network player position calculation algorithmic.
+
+1.8
+
+Add: Player Damage system.
+Add: Buggy vehicle for show the new driver and passenger system.
+Improve: Merge Car and Jet manager script to a most optimize and most easy to edit script (bl_VehicleManager.cs)
+Improve: Create a vehicle UI to manage all ui and not require assign on vehicle scripts.
+Add: 'InstantSpawn' option in bl_GameController.cs for spawn player right when enter in the room.
+Improve: Now you can select the Key to enter in vehicles from inspector of bl_VehicleManager.cs
+Add: Fall Damage.
+Add: Health Bar UI above the player.
+Improve: Now player driver can be visible locally and remote inside of vehicle.
+Improve: Now can death inside vehicles and re spawn.
+Improve: Passenger System, now is much more smooth sync and can create seat for vehicles much as you want.
+Improve: Now players can be visible when they are inside of the vehicle.
+Improve: Better Heat Look more optimize and with IK support.
+
+1.7
+
+- Improved: Pre-Scene Menu
+- Update to Photon 1.84.1
+- Add: Round Time and Max Players info in pre-scene menu.
+
+1.6.9
+
+Fix: Kick button appear in Master Client in pre-scene player list.
+Update: Particle API from unity 5.5++
+Add: A startup editor script for add the "NetworkPlayer" tag automatically on launch the asset in the first time.
+
+1.6.7
+
+Updated: to version 1.80 of PUN
+Add: 'Quick Play' option in main menu, join to an available room or create one automatically.
+Fix: CrossInput scripts error in unity 5.5
+Add: 2 new region to connect: India and South Korea.
+Fix: Error in photon 1.8
+
+1.6.1
+Fix: Error with version 1.75 of PUN.
+
+1.6
+
+- Add: 3 new region to connect: Canada, South America and USA West.
+- Add: Footstep for player depend of tag.
+- Improve: Support Unity 5.3++ SceneManager.
+- Fix: When Match time finish, return to the scene 0 instead of scene name in inspector.
+
+1.5.92
+
+Fix: Error in last version of Photon.
+Update to Photon Unity Networking v1.73
+
+1.5.9
+
+Fix: Grammar error, thanks to Joel.
+Fix: Photon status text position.
+
+1.5.8
+
+Improved: Player Network animation, now use blend tree.
+Improved: Better directional movement sync.
+Improved: Now can pickup items with vehicles.
+Fix: Lobby background scale.
+
+Version 1.5.6
+Fix: Only Master Client can use Door.
+Improve: Add rotation lerp to Door system.
+Add: PickUp Multiplayer System.
+Add: Example Item PickUp in scene.
+Add: Pickup UI Notified.
+Add: Pickup event delegate (over network) for sync callbacks when pickup a item.
+
+Version 1.5
+Add: Kick Player in Pre-Room Scene.
+Fix: Some grammar errors.
+Improve: Text for Doors now can be assigned in inspector for each.
+Add: Move platforms with advance synchronization.
+Add: bl_PhotonStatics script.
+Add: Server Statics UI in lobby.
+Improve: Fade text when update room list.
+Improve: Small style improvements.
+Update: Last Photon PUN Version.
+
+Version 1.4
+Fix: The map name and preview in the Host Room UI does not update until you press one of the arrows.
+Fix: Some grammar errors.
+Fix: In-game options menu doesn't change resolution.
+Add: Smooth Head Bob effect.
+Improved: Many scripts now get component automatically on start instead of assign it on inspector.
+Fix: Left and Right arrows for changing map in lobby, change the match time instead of the map.
+Fix: Local player not get controlled when mouse is unfocused without pause.
+Improved: Vehicles Managers scripts.
+Improved: Add log error when 'NetworkPlayer' tag is not added in tag list.
+Improved: Documentation.
+Improved: Update for last Photon Unity Networking (PUN).
+Change: Now Image effect are disable by default, because that causes crashing on low-end computers.
+
+Version 1.3
+- Add: Air Jet vehicle Sync.
+- Improved: Car Sync.
+- Fix: Final Round Text Show again in start when 1 round is finished.
+- Improved: Final Round Text Animation.
+- Improved: Minor Lobby UI.
+- Improved: More smooth follow of Draw Name UI;
+- Fix: 'Crate' photonView Log Error on start.
+- Improved: Car Engine Sound is heard from a long distance.
+- Improved: SyncObject's now take request view owner from master client for one more authoritative synchronization.
+- Improved: Car now take Master client as first owner.
+- Fix: All scroll view for Unity 5.2
+- Improved: Animator for player.
+- Fix: Player prefab not destroy on leave for remote players.
+- Fix: Player apply force to vehicles.
+- Fix: When enter in a room and pause static bool in still true.
+- Fix: When remote player exit from vehicle this cause collision with car.
+- Update: With last photon version.
+- Fix: Fade image scale.
+- Improved: Now players loaded room scene in same time with master, when this enter after countdown is started.
+
+Version 1.2
+- Update: Photon Cloud v1.60
+- Improved: PlayerName Input now have a default prefix.
+- Fix: When leave the car in movement this crashed movement.
+- Improved: Photon Log Debug option in lobby.
+- Improved: Car brake Light.
+
+Version 1.0.1:
+
+- Add: Select Server to connect menu.
+- Add: Option in lobby to select server.
+- Update: To Photon Unity Networking 1.58.
+- Improved: Now all [RPC] attributes change to [PunRPC] Attribute, this for avoid warning deprecated in Unity 5.1++
+- New: Log Window system.
+- Add: Log Window UI for notify important events to all players in the room with text.
+- Add: New ColorHelper script: with some functions to facilitate the collection of colors and color serialization.
+- Add: KickPlayer: A Kick Button for each player in playerList of room only available for master client.
+- Improved: SpawnPoint: Now you do not need to add these manually to the list, as they automatically get in runtime.
+- Add: New Spawn Mode "RoundRobin": which allows the player spawn every spawn point in order.
+- Fix: When press Tab key, the game crashed and inputs not work.
+- Fix: Animator state not return to crouch idle when move in crouch.
+- Improved: Pause Menu now show / hide with 'Escape' key, this can change from inspector of GameManager.
+- Add: Show / Hide Player List when press 'Tab' key.
+- Add: Rashawn Button.
+
+Version 1.0
+-Initial Version.
+
+Contact:
+Email: lovattostudio@gmail.com
+Forum: http://lovattostudio.com/forum/index.php
